@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E61557F-9D70-4FAA-B7D9-A5B41E6D9616}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MenuTest</RootNamespace>
+    <AssemblyName>MenuTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DemoCommon, Version=11.2040.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.0\DemoCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Syncfusion.Calculate.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Calculate.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Calculate.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Calculate.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Chart.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DemoUtility, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.DemoUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Diagram.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Diagram.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DICOM.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.DICOM.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.DocIO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocToPDFConverter.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.DocToPDFConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.ExcelToPDFConverter.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.ExcelToPDFConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Gauge.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Gauge.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GeckoHtmlRenderer.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.GeckoHtmlRenderer.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grid.Grouping.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grid.Grouping.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grid.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grouping.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Grouping.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.HtmlConverter.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.HtmlConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.HTMLUI.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.HTMLUI.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.MIME.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.MIME.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OCRProcessor.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OCRProcessor.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Olap.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Olap.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OlapChart.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OlapChart.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OlapClient.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OlapClient.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OlapGrid.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OlapGrid.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OlapSampleUtils, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OlapSampleUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OlapShared.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.OlapShared.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Pdf.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Schedule.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Schedule.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Schedule.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Schedule.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Scripting.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Scripting.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfBarcode.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.SfBarcode.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Shared.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.Tools.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Web, Version=11.2045.0.25, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\11.2.0.25\Assemblies\4.5\Syncfusion.XlsIO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Trirand.Web, Version=4.5.2.0, Culture=neutral, PublicKeyToken=e2819dc449af3295, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Trirand.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="03_menu_blue.html" />
+    <Content Include="About.aspx" />
+    <Content Include="AccountInfo.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="css\ellipsis-xbl.xml" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\bg2.png" />
+    <Content Include="img\downArrow.png" />
+    <Content Include="img\downArrow_l.png" />
+    <Content Include="img\downArrow_r.png" />
+    <Content Include="img\toggle.png" />
+    <Content Include="img\upArrow.png" />
+    <Content Include="menu.css" />
+    <Content Include="css\ui.jqgrid.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Details.aspx" />
+    <Content Include="Images\document.png" />
+    <Content Include="Images\folder-open.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\fullscreen\1.jpg" />
+    <Content Include="Images\fullscreen\2.jpg" />
+    <Content Include="Images\fullscreen\3.jpg" />
+    <Content Include="Images\fullscreen\4.jpg" />
+    <Content Include="Images\fullscreen\5.jpg" />
+    <Content Include="Images\fullscreen\6.jpg" />
+    <Content Include="Images\fullscreen\high.gif" />
+    <Content Include="Images\fullscreen\huge.gif" />
+    <Content Include="Images\fullscreen\wide.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Images\prettyPhoto\default\loader.gif" />
+    <Content Include="Images\prettyPhoto\default\sprite.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Images\thumbnails\flash-logo.png" />
+    <Content Include="Images\thumbnails\quicktime-logo.gif" />
+    <Content Include="Images\thumbnails\t_1.jpg" />
+    <Content Include="Images\thumbnails\t_2.jpg" />
+    <Content Include="Images\thumbnails\t_3.jpg" />
+    <Content Include="Images\thumbnails\t_4.jpg" />
+    <Content Include="Images\thumbnails\t_5.jpg" />
+    <Content Include="bg.png" />
+    <Content Include="bg2.png" />
+    <Content Include="downArrow.png" />
+    <Content Include="downArrow_l.png" />
+    <Content Include="downArrow_r.png" />
+    <Content Include="TestMenu.aspx" />
+    <Content Include="toggle.png" />
+    <Content Include="upArrow.png" />
+    <Content Include="index.html" />
+    <Content Include="js\Changes.txt" />
+    <Content Include="js\i18n\grid.locale-ar.js" />
+    <Content Include="js\i18n\grid.locale-bg.js" />
+    <Content Include="js\i18n\grid.locale-bg1251.js" />
+    <Content Include="js\i18n\grid.locale-cat.js" />
+    <Content Include="js\i18n\grid.locale-cn.js" />
+    <Content Include="js\i18n\grid.locale-cs.js" />
+    <Content Include="js\i18n\grid.locale-da.js" />
+    <Content Include="js\i18n\grid.locale-de.js" />
+    <Content Include="js\i18n\grid.locale-dk.js" />
+    <Content Include="js\i18n\grid.locale-el.js" />
+    <Content Include="js\i18n\grid.locale-en.js" />
+    <Content Include="js\i18n\grid.locale-es.js" />
+    <Content Include="js\i18n\grid.locale-fa.js" />
+    <Content Include="js\i18n\grid.locale-fi.js" />
+    <Content Include="js\i18n\grid.locale-fr.js" />
+    <Content Include="js\i18n\grid.locale-gl.js" />
+    <Content Include="js\i18n\grid.locale-he.js" />
+    <Content Include="js\i18n\grid.locale-hr.js" />
+    <Content Include="js\i18n\grid.locale-hr1250.js" />
+    <Content Include="js\i18n\grid.locale-hu.js" />
+    <Content Include="js\i18n\grid.locale-id.js" />
+    <Content Include="js\i18n\grid.locale-is.js" />
+    <Content Include="js\i18n\grid.locale-it.js" />
+    <Content Include="js\i18n\grid.locale-ja.js" />
+    <Content Include="js\i18n\grid.locale-jp.js" />
+    <Content Include="js\i18n\grid.locale-kr.js" />
+    <Content Include="js\i18n\grid.locale-lt.js" />
+    <Content Include="js\i18n\grid.locale-mne.js" />
+    <Content Include="js\i18n\grid.locale-nl.js" />
+    <Content Include="js\i18n\grid.locale-no.js" />
+    <Content Include="js\i18n\grid.locale-pl.js" />
+    <Content Include="js\i18n\grid.locale-pt-br.js" />
+    <Content Include="js\i18n\grid.locale-pt.js" />
+    <Content Include="js\i18n\grid.locale-ro.js" />
+    <Content Include="js\i18n\grid.locale-ru.js" />
+    <Content Include="js\i18n\grid.locale-sk.js" />
+    <Content Include="js\i18n\grid.locale-sp.js" />
+    <Content Include="js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="js\i18n\grid.locale-sr.js" />
+    <Content Include="js\i18n\grid.locale-sv.js" />
+    <Content Include="js\i18n\grid.locale-th.js" />
+    <Content Include="js\i18n\grid.locale-tr.js" />
+    <Content Include="js\i18n\grid.locale-tw.js" />
+    <Content Include="js\i18n\grid.locale-ua.js" />
+    <Content Include="js\i18n\grid.locale-vi.js" />
+    <Content Include="js\install.txt" />
+    <Content Include="js\jquery-1.9.0.min.js" />
+    <Content Include="js\jquery.jqAutoComplete.min.js" />
+    <Content Include="js\jquery.jqChart.exporting.min.js" />
+    <Content Include="js\jquery.jqChart.min.js" />
+    <Content Include="js\jquery.jqDatePicker.min.js" />
+    <Content Include="js\jquery.jqDropDownList.min.js" />
+    <Content Include="js\jquery.jqGrid.min.js" />
+    <Content Include="js\jquery.jqGrid.src.js" />
+    <Content Include="js\jquery.jqTreeView.min.js" />
+    <Content Include="js\trirand\i18n\grid.locale-ar.js" />
+    <Content Include="js\trirand\i18n\grid.locale-bg.js" />
+    <Content Include="js\trirand\i18n\grid.locale-bg1251.js" />
+    <Content Include="js\trirand\i18n\grid.locale-cat.js" />
+    <Content Include="js\trirand\i18n\grid.locale-cn.js" />
+    <Content Include="js\trirand\i18n\grid.locale-cs.js" />
+    <Content Include="js\trirand\i18n\grid.locale-de.js" />
+    <Content Include="js\trirand\i18n\grid.locale-dk.js" />
+    <Content Include="js\trirand\i18n\grid.locale-el.js" />
+    <Content Include="js\trirand\i18n\grid.locale-en.js" />
+    <Content Include="js\trirand\i18n\grid.locale-fa.js" />
+    <Content Include="js\trirand\i18n\grid.locale-fi.js" />
+    <Content Include="js\trirand\i18n\grid.locale-fr.js" />
+    <Content Include="js\trirand\i18n\grid.locale-he.js" />
+    <Content Include="js\trirand\i18n\grid.locale-hu.js" />
+    <Content Include="js\trirand\i18n\grid.locale-is.js" />
+    <Content Include="js\trirand\i18n\grid.locale-it.js" />
+    <Content Include="js\trirand\i18n\grid.locale-ja.js" />
+    <Content Include="js\trirand\i18n\grid.locale-jp.js" />
+    <Content Include="js\trirand\i18n\grid.locale-lt.js" />
+    <Content Include="js\trirand\i18n\grid.locale-nl.js" />
+    <Content Include="js\trirand\i18n\grid.locale-no.js" />
+    <Content Include="js\trirand\i18n\grid.locale-pl.js" />
+    <Content Include="js\trirand\i18n\grid.locale-pt-br.js" />
+    <Content Include="js\trirand\i18n\grid.locale-pt.js" />
+    <Content Include="js\trirand\i18n\grid.locale-ro.js" />
+    <Content Include="js\trirand\i18n\grid.locale-ru.js" />
+    <Content Include="js\trirand\i18n\grid.locale-sk.js" />
+    <Content Include="js\trirand\i18n\grid.locale-sp.js" />
+    <Content Include="js\trirand\i18n\grid.locale-sv.js" />
+    <Content Include="js\trirand\i18n\grid.locale-tr.js" />
+    <Content Include="js\trirand\i18n\grid.locale-ua.js" />
+    <Content Include="js\trirand\jquery.jqAutoComplete.min.js" />
+    <Content Include="js\trirand\jquery.jqChart.exporting.min.js" />
+    <Content Include="js\trirand\jquery.jqChart.min.js" />
+    <Content Include="js\trirand\jquery.jqDatePicker.min.js" />
+    <Content Include="js\trirand\jquery.jqDropDownList.min.js" />
+    <Content Include="js\trirand\jquery.jqGrid.min.js" />
+    <Content Include="js\trirand\jquery.jqTreeView.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Mail.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="plugins\grid.addons.js" />
+    <Content Include="plugins\grid.postext.js" />
+    <Content Include="plugins\grid.setcolumns.js" />
+    <Content Include="plugins\jquery.contextmenu.js" />
+    <Content Include="plugins\jquery.searchFilter.js" />
+    <Content Include="plugins\jquery.tablednd.js" />
+    <Content Include="plugins\searchFilter.css" />
+    <Content Include="plugins\ui.multiselect.css" />
+    <Content Include="plugins\ui.multiselect.js" />
+    <Content Include="UserAccount.aspx" />
+    <Content Include="PostAds.aspx" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Scripts\jquery.effects.blind.js" />
+    <Content Include="Scripts\jquery.effects.bounce.js" />
+    <Content Include="Scripts\jquery.effects.clip.js" />
+    <Content Include="Scripts\jquery.effects.core.js" />
+    <Content Include="Scripts\jquery.effects.drop.js" />
+    <Content Include="Scripts\jquery.effects.explode.js" />
+    <Content Include="Scripts\jquery.effects.fade.js" />
+    <Content Include="Scripts\jquery.effects.fold.js" />
+    <Content Include="Scripts\jquery.effects.highlight.js" />
+    <Content Include="Scripts\jquery.effects.pulsate.js" />
+    <Content Include="Scripts\jquery.effects.scale.js" />
+    <Content Include="Scripts\jquery.effects.shake.js" />
+    <Content Include="Scripts\jquery.effects.slide.js" />
+    <Content Include="Scripts\jquery.effects.transfer.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.ui.accordion.js" />
+    <Content Include="Scripts\jquery.ui.autocomplete.js" />
+    <Content Include="Scripts\jquery.ui.button.js" />
+    <Content Include="Scripts\jquery.ui.core.js" />
+    <Content Include="Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Scripts\jquery.ui.dialog.js" />
+    <Content Include="Scripts\jquery.ui.draggable.js" />
+    <Content Include="Scripts\jquery.ui.droppable.js" />
+    <Content Include="Scripts\jquery.ui.mouse.js" />
+    <Content Include="Scripts\jquery.ui.position.js" />
+    <Content Include="Scripts\jquery.ui.progressbar.js" />
+    <Content Include="Scripts\jquery.ui.resizable.js" />
+    <Content Include="Scripts\jquery.ui.selectable.js" />
+    <Content Include="Scripts\jquery.ui.slider.js" />
+    <Content Include="Scripts\jquery.ui.sortable.js" />
+    <Content Include="Scripts\jquery.ui.tabs.js" />
+    <Content Include="Scripts\jquery.ui.widget.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json_parse.js" />
+    <Content Include="Scripts\json_parse_state.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="src\css\ellipsis-xbl.xml" />
+    <Content Include="src\css\ui.jqgrid.css" />
+    <Content Include="src\css\ui.multiselect.css" />
+    <Content Include="src\grid.base.js" />
+    <Content Include="src\grid.celledit.js" />
+    <Content Include="src\grid.common.js" />
+    <Content Include="src\grid.custom.js" />
+    <Content Include="src\grid.filter.js" />
+    <Content Include="src\grid.formedit.js" />
+    <Content Include="src\grid.grouping.js" />
+    <Content Include="src\grid.import.js" />
+    <Content Include="src\grid.inlinedit.js" />
+    <Content Include="src\grid.jqueryui.js" />
+    <Content Include="src\grid.loader.js" />
+    <Content Include="src\grid.subgrid.js" />
+    <Content Include="src\grid.tbltogrid.js" />
+    <Content Include="src\grid.treegrid.js" />
+    <Content Include="src\i18n\grid.locale-ar.js" />
+    <Content Include="src\i18n\grid.locale-bg.js" />
+    <Content Include="src\i18n\grid.locale-bg1251.js" />
+    <Content Include="src\i18n\grid.locale-cat.js" />
+    <Content Include="src\i18n\grid.locale-cn.js" />
+    <Content Include="src\i18n\grid.locale-cs.js" />
+    <Content Include="src\i18n\grid.locale-da.js" />
+    <Content Include="src\i18n\grid.locale-de.js" />
+    <Content Include="src\i18n\grid.locale-dk.js" />
+    <Content Include="src\i18n\grid.locale-el.js" />
+    <Content Include="src\i18n\grid.locale-en.js" />
+    <Content Include="src\i18n\grid.locale-es.js" />
+    <Content Include="src\i18n\grid.locale-fa.js" />
+    <Content Include="src\i18n\grid.locale-fi.js" />
+    <Content Include="src\i18n\grid.locale-fr.js" />
+    <Content Include="src\i18n\grid.locale-gl.js" />
+    <Content Include="src\i18n\grid.locale-he.js" />
+    <Content Include="src\i18n\grid.locale-hr.js" />
+    <Content Include="src\i18n\grid.locale-hr1250.js" />
+    <Content Include="src\i18n\grid.locale-hu.js" />
+    <Content Include="src\i18n\grid.locale-id.js" />
+    <Content Include="src\i18n\grid.locale-is.js" />
+    <Content Include="src\i18n\grid.locale-it.js" />
+    <Content Include="src\i18n\grid.locale-ja.js" />
+    <Content Include="src\i18n\grid.locale-kr.js" />
+    <Content Include="src\i18n\grid.locale-lt.js" />
+    <Content Include="src\i18n\grid.locale-mne.js" />
+    <Content Include="src\i18n\grid.locale-nl.js" />
+    <Content Include="src\i18n\grid.locale-no.js" />
+    <Content Include="src\i18n\grid.locale-pl.js" />
+    <Content Include="src\i18n\grid.locale-pt-br.js" />
+    <Content Include="src\i18n\grid.locale-pt.js" />
+    <Content Include="src\i18n\grid.locale-ro.js" />
+    <Content Include="src\i18n\grid.locale-ru.js" />
+    <Content Include="src\i18n\grid.locale-sk.js" />
+    <Content Include="src\i18n\grid.locale-sr-latin.js" />
+    <Content Include="src\i18n\grid.locale-sr.js" />
+    <Content Include="src\i18n\grid.locale-sv.js" />
+    <Content Include="src\i18n\grid.locale-th.js" />
+    <Content Include="src\i18n\grid.locale-tr.js" />
+    <Content Include="src\i18n\grid.locale-tw.js" />
+    <Content Include="src\i18n\grid.locale-ua.js" />
+    <Content Include="src\i18n\grid.locale-vi.js" />
+    <Content Include="src\jqDnR.js" />
+    <Content Include="src\jqModal.js" />
+    <Content Include="src\jquery.fmatter.js" />
+    <Content Include="src\JsonXml.js" />
+    <Content Include="Styles\jquery-ui-1.8.23.custom.css" />
+    <Content Include="Styles\jquery.ui.accordion.css" />
+    <Content Include="Styles\jquery.ui.all.css" />
+    <Content Include="Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Styles\jquery.ui.base.css" />
+    <Content Include="Styles\jquery.ui.button.css" />
+    <Content Include="Styles\jquery.ui.core.css" />
+    <Content Include="Styles\jquery.ui.datepicker.css" />
+    <Content Include="Styles\jquery.ui.dialog.css" />
+    <Content Include="Styles\jquery.ui.progressbar.css" />
+    <Content Include="Styles\jquery.ui.resizable.css" />
+    <Content Include="Styles\jquery.ui.selectable.css" />
+    <Content Include="Styles\jquery.ui.slider.css" />
+    <Content Include="Styles\jquery.ui.tabs.css" />
+    <Content Include="Styles\jquery.ui.theme.css" />
+    <Content Include="Styles\prettyPhoto.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="SyncDetails.aspx" />
+    <Content Include="themes\ui.jqdropdownlist.css" />
+    <Content Include="themes\ui.jqgrid.css" />
+    <Content Include="themes\ui.jqtreeview.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="xhr_response.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountInfo.aspx.cs">
+      <DependentUpon>AccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountInfo.aspx.designer.cs">
+      <DependentUpon>AccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Authenticate.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPHandler.ashx.cs">
+      <DependentUpon>HTTPHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail.aspx.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail.aspx.designer.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestMenu.aspx.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestMenu.aspx.designer.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.aspx.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccount.aspx.designer.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostAds.aspx.cs">
+      <DependentUpon>PostAds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostAds.aspx.designer.cs">
+      <DependentUpon>PostAds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SyncDetails.aspx.cs">
+      <DependentUpon>SyncDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SyncDetails.aspx.designer.cs">
+      <DependentUpon>SyncDetails.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPHandler.ashx" />
+    <None Include="Images\fullscreen\.DS_Store" />
+    <Content Include="packages.config" />
+    <Content Include="Thumbs.db" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33695</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

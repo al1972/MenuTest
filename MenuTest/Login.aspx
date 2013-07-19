@@ -1,0 +1,516 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="MenuTest.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+</head>
+<body>
+     <div style="margin-left: 20%; margin-right: 20%; border: none; padding: 0;text-align: center;">
+    <!-- start of menu -->
+<div class="page_wrapper">
+
+
+
+	<div class="responsive_menu_container responsive_menu_blue"><!-- MENU CONTAINER -->
+
+
+
+		<!-- Menu Trigger Button -->
+		<label for="menu-dropdown-0" class="toggle_menu_label">Menu</label>
+		<input type="checkbox" class="toggle_menu" id="menu-dropdown-0">
+		<!-- End Menu Trigger Button -->
+
+
+
+		<ul class="responsive_menu"><!-- Menu Bar -->
+
+
+
+			<li><!-- 1st Menu Item -->
+
+
+		        <label for="menu-dropdown-1a" class="parent">Multi Drops</label>
+		        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-1a">
+
+
+				<ul><!-- Drop Down Level 1 -->
+
+
+					<li>
+
+
+				        <label for="menu-dropdown-2a" class="parent_r">Level 1</label>
+				        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-2a">
+
+
+						<ul><!-- Drop Down Level 2 -->
+
+
+							<li><a href="http://codecanyon.net/user/Pixelworkshop/portfolio">Test Link</a></li>
+							<li><a href="#">Level 2</a></li>
+							<li><a href="#">Level 2</a></li>
+
+
+							<li>
+
+
+					        <label for="menu-dropdown-3a" class="parent_r">Level 2</label>
+					        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-3a">
+
+
+								<ul><!-- Drop Down Level 3 -->
+
+
+									<li><a href="#">Level 3</a></li>
+
+
+									<li>
+
+
+							        <label for="menu-dropdown-4a" class="parent_r">Level 3</label>
+							        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-4a">
+
+
+										<ul><!-- Drop Down Level 4 -->
+
+
+											<li><a href="#">Level 4</a></li>
+											<li><a href="#">Level 4</a></li>
+
+
+												<li>
+
+
+										        <label for="menu-dropdown-5a" class="parent_r">Level 4</label>
+										        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-5a">
+
+
+													<ul><!-- Drop Down Level 5 -->
+
+
+														<li><a href="#">Level 5</a></li>
+														<li><a href="#">Level 5</a></li>
+														<li><a href="#">Level 5</a></li>
+														<li><a href="#">Level 5</a></li>
+
+
+													</ul><!-- End Drop Down Level 5 -->
+
+
+												</li>
+
+
+											<li><a href="#">Level 4</a></li>
+
+
+										</ul><!-- End Drop Down Level 4 -->
+
+
+									</li>
+
+
+									<li><a href="#">Level 3</a></li>
+
+
+								</ul><!-- End Drop Down Level 3 -->
+
+
+							</li>
+
+
+						</ul><!-- End Drop Down Level 2 -->
+
+
+					</li>
+
+
+					<li>
+
+
+				        <label for="menu-dropdown-2b" class="parent_r">Level 1</label>
+				        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-2b">
+
+
+						<ul><!-- Drop Down Level 2 -->
+
+
+							<li><a href="#">Level 2</a></li>
+							<li><a href="#">Level 2</a></li>
+							<li><a href="#">Level 2</a></li>
+
+
+							<li>
+
+
+					        <label for="menu-dropdown-3b" class="parent_r">Level 2</label>
+					        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-3b">
+
+
+								<ul><!-- Drop Down Level 3 -->
+
+
+									<li><a href="#">Level 3</a></li>
+									<li><a href="#">Level 3</a></li>
+									<li><a href="#">Level 3</a></li>
+
+
+									<li>
+
+
+							        <label for="menu-dropdown-4b" class="parent_l">Level 3</label>
+							        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-4b">
+
+
+										<ul class="dropdown_left"><!-- Drop Down Level 4 -->
+
+
+											<li><a href="#">Level 4</a></li>
+											<li><a href="#">Level 4</a></li>
+											<li><a href="#">Level 4</a></li>
+											<li><a href="#">Level 4</a></li>
+
+
+										</ul><!-- End Drop Down Level 4 -->
+
+
+									</li>
+
+
+								</ul><!-- End Drop Down Level 3 -->
+
+
+							</li>
+
+
+						</ul><!-- End Drop Down Level 2 -->
+
+
+					</li>
+
+
+					<li><a href="#">Level 1</a></li>
+					<li><a href="#">Level 1</a></li>
+					<li><a href="#">Level 1</a></li>
+
+
+				</ul><!-- End Drop Down Level 1 -->
+
+
+			</li><!-- End 1st Menu Item -->
+
+
+
+			<li><!-- 2nd Menu Item -->
+
+
+		        <label for="menu-dropdown-1b" class="parent">Audio</label>
+		        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-1b">
+
+
+				<ul><!-- Drop Down Level 1 -->
+
+
+					<li><a href="#">MP3 Players</a></li>
+					<li><a href="#">Home Audio</a></li>
+					<li><a href="#">Speakers</a></li>
+					<li><a href="#">Home Theaters</a></li>
+					<li><a href="#">Headphones</a></li>
+					<li><a href="#">CD Players, Radios</a></li>
+					<li><a href="#">Car Audio</a></li>
+					<li><a href="#">Musical Instruments</a></li>
+					<li><a href="#">Accessories</a></li>
+
+
+				</ul><!-- End Drop Down Level 1 -->
+
+
+
+			</li><!-- End 2nd Menu Item -->
+
+
+
+			<li><!-- 3rd Menu Item -->
+
+
+		        <label for="menu-dropdown-1c" class="parent">Mobile Phones</label>
+		        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-1c">
+
+
+				<ul><!-- Drop Down Level 1 -->
+
+
+					<li><a href="#">iPhones</a></li>
+					<li><a href="#">Android</a></li>
+					<li><a href="#">No-Contract Phones</a></li>
+					<li><a href="#">Unlocked Phones</a></li>
+					<li><a href="#">Mobile Broadband</a></li>
+					<li><a href="#">Accessories</a></li>
+
+
+				</ul><!-- End Drop Down Level 1 -->
+
+
+
+			</li><!-- End 3rd Menu Item -->
+
+
+
+			<li><!-- 4th Menu Item -->
+
+
+		        <label for="menu-dropdown-1d" class="parent">Cameras</label>
+		        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-1d">
+
+
+				<ul><!-- Drop Down Level 1 -->
+
+
+					<li><a href="#">Digital Cameras</a></li>
+					<li><a href="#">Compact Cameras</a></li>
+					<li><a href="#">DSLR Cameras</a></li>
+					<li><a href="#">Lenses</a></li>
+					<li><a href="#">Camcorders</a></li>
+					<li><a href="#">Memory Cards</a></li>
+					<li><a href="#">Photo Printers</a></li>
+					<li><a href="#">Photo Frames</a></li>
+					<li><a href="#">Webcams</a></li>
+					<li><a href="#">Accessories</a></li>
+
+
+				</ul><!-- End Drop Down Level 1 -->
+
+
+
+			</li><!-- End 4th Menu Item -->
+
+
+
+			<li><!-- 5th Menu Item -->
+
+
+		        <label for="menu-dropdown-1e" class="parent">Office</label>
+		        <input type="checkbox" class="dropdown_trigger" id="menu-dropdown-1e">
+
+
+				<ul><!-- Drop Down Level 1 -->
+
+
+					<li><a href="#">Printers</a></li>
+					<li><a href="#">Scanners</a></li>
+					<li><a href="#">Fax Machines</a></li>
+					<li><a href="#">Ink &amp; Toners</a></li>
+					<li><a href="#">School Supplies</a></li>
+					<li><a href="#">Office Electronics</a></li>
+					<li><a href="#">Office Furniture</a></li>
+					<li><a href="#">Projectors &amp; Screens</a></li>
+					<li><a href="#">Office Softwares</a></li>
+
+
+				</ul><!-- End Drop Down Level 1 -->
+
+
+
+			</li><!-- End 5th Menu Item -->
+
+
+
+			<li><!-- 6th Menu Item -->
+
+				<a href="#">No Drop Down</a>
+
+			</li><!-- End 6th Menu Item -->
+
+
+
+		</ul><!-- End Menu Bar -->
+
+
+
+	</div><!-- END MENU CONTAINER -->
+
+
+
+
+
+	<!-- DESCRIPTION - NOT PART OF THE MENU -->
+
+
+
+	<div class="menu_description">
+
+        <h1>Responsive CSS3 Multi Drop Down Menu</h1>
+
+        <p>Designed and coded to fit into any kind of devices, this versatile menu will allow you to create and add drop down menus that will automatically fit into your layouts.</p>
+        
+        <p>By nesting elements, you'll be able to add as many sublevels as you want. On mobile devices, those submenus will work as toggles (or accordions) : each of them can be opened and closed on touch. This menu works without a single line of javascript and comes with CSS3 effects.</p>
+
+        <p>This menu has been coded to fit anywhere on your pages, you don't have to set widths or spacings, just put the menu where you want it to appear and it'll take the space available. By changing a few classes, you'll be able to switch between all the variants (position, colors, etc.)</p>
+
+        <h2>Main Features</h2>
+
+        <ul class="description">
+        <li>Completely responsive</li>
+        <li>Dark & Light Themes</li>
+        <li>Additional Colors</li>
+        <li>Infinite Submenus</li>
+        <li>No Javascript</li>
+        <li>Valid XHTML / CSS3 markup</li>
+        <li>Cross Browser Support</li>
+        <li>Help documentation</li>
+        </ul>
+
+        <h2>Mobile Devices</h2>
+
+        <p>Due to the variety of mobile devices available, it was of course not possible to test this menu with all of them and guarantee that it will work in the exact same way with every kind of mobile. If you notice any kind of bug, feel free to get in touch with me and I'll try to improve the code if necessary.</p>
+
+        <h2>Compatible Browsers</h2>
+
+        <p>This menu has been tested (and works !) in all the following browsers :</p>
+
+        <ul class="description">
+        <li>Internet Explorer 7+</li>
+        <li>Firefox 2+</li>
+        <li>Safari 4+</li>
+        <li>Opera 10+</li>
+        <li>Chrome 4+</li>
+        </ul>
+
+        <h2>Support and Updates</h2>
+
+        <p>Feel free to contact me at any time if you have questions by using the contact form of my profile page. Please keep in mind that once purchased, I provide support for free but customizations are a paid service (adding some functionnality, tweaking the menu, etc.). Support questions sent via any other way won't be answered.</p>
+
+        <p>I try to regularly update my products based on the feedback I receive, so if you find any kind of bug, I'll do my best to update the menu as soon as possible. If you have an idea that could improve it, feel also free to ask me, some customization questions happened to be the starting point of an update.</p>
+
+        <ul class="description">
+            <li><a href="http://codecanyon.net/user/Pixelworkshop">Pixelworkshop on Codecanyon</a></li>
+            <li><a href="http://themeforest.net/user/Pixelworkshop">Pixelworkshop on Themeforest</a></li>
+            <li><a href="http://pixelworkshop.fr/">Pixelworkshop Site</a></li>
+            <li><a href="http://twitter.com/pixlworkshop">Pixelworkshop on Twitter</a></li>
+        </ul>
+        <p>Thanks for reading !</p>
+        <p><strong><em>Pixelworkshop</em></strong></p>
+	</div>
+
+
+
+	<!-- END DESCRIPTION - NOT PART OF THE MENU -->
+
+
+
+</div>
+
+    <!-- end of menu -->
+
+
+    <form id="form1" runat="server">
+         
+
+        <div>
+ 
+            
+          <table border="1" style="width:100%;">
+             <tr><td colspan="4" style="text-align:right;"><div id="dvuserid"  runat="server"><asp:LinkButton  ID="btnlink" runat="server" Text="" OnClick="btnlink_Click"></asp:LinkButton></div></td></tr>
+            <tr>
+                <td>
+                    <table  style="width:100%;" border="0">
+                         <tr>
+                            <td colspan="2" style="text-align:left;">
+                                <asp:Label ID="Label4" runat="server" Text="Sign in"></asp:Label>
+                                </td>
+                            
+                             <td colspan="2" style="text-align:left;">
+                                <asp:Label ID="Label5" runat="server" Text="New User Sign Up"></asp:Label>
+                                </td>
+                            
+                         
+                          
+                        </tr>
+                        <tr>
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                                <asp:TextBox TabIndex="1" runat="server" ID="txtEmail"></asp:TextBox>
+
+                            </td>
+ 
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="lblNewEmail" runat="server" Text="Email"></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                                <asp:TextBox TabIndex="4" runat="server" ID="txtNewEmail"></asp:TextBox>
+
+                            </td>
+                          
+                        </tr>
+
+                        <tr>
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="lblPwd" runat="server" Text="Password"></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                                <asp:TextBox  TabIndex="2" runat="server" ID="txtPwd"></asp:TextBox>
+
+                            </td>
+ 
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="lblNewPwd" runat="server" Text="Enter Password"></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                                <asp:TextBox  TabIndex="5" runat="server" ID="txtNewPwd"></asp:TextBox>
+
+                            </td>
+                          
+                        </tr>
+
+                           <tr>
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                               &nbsp; 
+
+                            </td>
+ 
+                            <td style="width:25%;text-align:left;">
+                                <asp:Label ID="Label3" runat="server" Text="Re-enter Password"></asp:Label>
+                                </td>
+                            
+                            <td style="width:25%;text-align:left;">
+                                <asp:TextBox TabIndex="6" runat="server" ID="txtReNewPwd"></asp:TextBox>
+
+                            </td>
+                          
+                        </tr>
+
+                         <tr>
+                          <td colspan="2" style="text-align:center;">
+                                <asp:Button ID="signin" TabIndex="3" runat="server" Text="Sign in" OnClick="signin_Click1"></asp:Button>
+                                </td>
+                            
+                             <td colspan="2" style="text-align:center;">
+                                <asp:Button ID="Signup" TabIndex="8" runat="server" Text="Sign Up" OnClick="Signup_Click1"></asp:Button>
+                                </td>
+                            
+                          
+                        </tr>
+                        </table>
+                    </td>
+                </tr>
+              </table>
+            </div>
+   
+    </form>
+      </div>
+</body>
+</html>
